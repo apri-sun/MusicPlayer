@@ -271,6 +271,18 @@ const goToSelf = function() {
 }
 
 // 随机播放
+const goToRadom = function(musicList) {
+    var r = parseInt(Math.random() * 10)
+    var n = musicList.length
+    var m = r % n + 1
+    let s = e('source')
+    s.dataset.musicId = m
+    for(let i of musicList){
+        if(i.id == m){
+            sourceChagne(i.name)
+        }
+    }
+}
 
 // 判断播放方式
 const playWay = function() {
